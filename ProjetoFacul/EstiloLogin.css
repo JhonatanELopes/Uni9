@@ -1,0 +1,202 @@
+/* Limpeza e Estilos Básicos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* --- CONTAINER DO TOPO (HEADER) --- */
+.header {
+    width: 100%;
+    /* Fundo gradiente azul */
+    background: linear-gradient(to bottom, #6ba8ff, #004a91);
+    color: white; 
+    
+    /* CHAVE PARA EVITAR CORTE: Padding superior/inferior para garantir espaço para os botões de canto */
+    padding: 60px 20px; 
+    
+    /* Contexto para posicionamento absoluto dos cantos */
+    position: relative; 
+    
+    /* Flexbox para centralizar o conteúdo do meio */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}
+
+/* Estilos Comuns de Links/Botões no Header */
+.btn-back, .btn-auth {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 1. Botão Voltar: Canto Superior Esquerdo (position: absolute) */
+.header-left-top {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+}
+
+/* 2. Botões Login e Cadastrar: Canto Inferior Direito (position: absolute) */
+.cadastrologin {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    color: white;
+    display: flex; /* Alinha Login e Cadastrar lado a lado */
+    gap: 15px; 
+}
+.cadastrologin a {
+    text-decoration: none;
+    color: white;
+}
+.btn-auth {
+    padding: 8px 12px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos do Título/Logo Central */
+.header-center h1 {
+    font-style: italic;
+    margin: 0;
+    font-size: 50px;
+    color: #003366; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+/* Estilos dos Pontos Vermelhos */
+.dots {
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+/* --- CONTEÚDO PRINCIPAL (FÓRMULÁRIO) --- */
+.container {
+    text-align: center;
+    /* CHAVE PARA EVITAR SOBREPOSIÇÃO: Empurra o container para baixo, 
+       começando bem depois do header. */
+    margin-top: 100px; 
+}
+
+.login-box {
+    display: inline-block;
+    background-color: #b3ccff;
+    padding: 25px 40px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 220px;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    width: 220px;
+    padding: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 8px 0;
+    width: 220px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0055aa;
+}
+
+.login-box a {
+    color: blue;
+    text-decoration: none;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+/* Adicionando estilos de tabela para o restante do seu CSS original */
+
+.products-container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.product-count {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.products-table th, .products-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.products-table th {
+    background-color: #f2f2f2;
+}
+
+.products-table .actions a {
+    margin-right: 5px;
+    text-decoration: none;
+}
+.header-center{
+    text-align: center;
+}
+.botao{
+    justify-self: center;
+}
+.checkbox-row {
+    align-self: left;
+    gap: 8px;  /* espaço entre texto e checkbox */
+    margin-bottom: 10px;
+}
+
